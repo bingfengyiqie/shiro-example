@@ -27,7 +27,7 @@ import org.apache.shiro.authz.Permission;
  */
 public class BitPermission implements Permission {
 
-    private String resourceIdentify;
+    private String resourceIdentify;//资源识别
     private int permissionBit;
     private String instanceId;
 

@@ -79,7 +79,7 @@ public class AuthenticatorTest {
         PrincipalCollection principalCollection = subject.getPrincipals();
         Assert.assertEquals(1, principalCollection.asList().size());
     }
-
+            
     private void login(String configFile) {
         //1、获取SecurityManager工厂，此处使用Ini配置文件初始化SecurityManager
         Factory<org.apache.shiro.mgt.SecurityManager> factory =

@@ -19,7 +19,8 @@ public class MyRealm1 implements Realm {
 
     @Override
     public boolean supports(AuthenticationToken token) {
-        return token instanceof UsernamePasswordToken; //仅支持UsernamePasswordToken类型的Token
+        return token instanceof UsernamePasswordToken; 
+        //仅支持UsernamePasswordToken类型的Token
     }
 
     @Override

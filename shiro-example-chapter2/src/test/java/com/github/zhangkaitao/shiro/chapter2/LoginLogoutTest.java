@@ -31,7 +31,7 @@ public class LoginLogoutTest {
         Factory<org.apache.shiro.mgt.SecurityManager> factory =
                 new IniSecurityManagerFactory("classpath:shiro.ini");
 
-        //2、得到SecurityManager实例 并绑定给SecurityUtils
+        //2、得到SecurityManager实例 并绑定给SecurityUtils ，这是一个全局设置，设置一次即可
         org.apache.shiro.mgt.SecurityManager securityManager = factory.getInstance();
         SecurityUtils.setSecurityManager(securityManager);
 
@@ -93,7 +93,7 @@ public class LoginLogoutTest {
 
         //3、得到Subject及创建用户名/密码身份验证Token（即用户身份/凭证）
         Subject subject = SecurityUtils.getSubject();
-        UsernamePasswordToken token = new UsernamePasswordToken("wang", "123");
+        UsernamePasswordToken token = new UsernamePasswordToken("zhang1", "123");
 
         try {
             //4、登录，即身份验证
